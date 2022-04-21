@@ -1,0 +1,29 @@
+@startuml
+Class main{
++ main(args : String) : void
+}
+interface SortStratege{
+ customSort() : void
+} 
+Class main{
+ customSort() : List<Person>
+}
+Class AgeSortStrategy{
+ customSort() : List<Person>
+}
+Class HeightSortStrategy{
+ customSort() : List<Person>
+}
+Class NameSortStrategy{
+ customSort() : List<Person>
+}
+Class WeightStrategy{
+ customSort() : List<Person>
+}
+main *..> SortStratege
+AgeSortStrategy ..> SortStratege
+HeightSortStrategy ..> SortStratege
+NameSortStrategy ..> SortStratege
+WeightStrategy ..> SortStratege
+
+@enduml
